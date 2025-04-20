@@ -96,6 +96,14 @@ body {
   .d-flex {
     column-gap: 60px;
   }
+  .intro-body{
+    .intro-body-content{
+        @media (max-width:576px){
+            text-align: center!important;
+            margin-top: 2rem;
+        }
+    }
+  }
 }
 
 // Responsive
@@ -288,6 +296,7 @@ footer .social-icons a {
 // Card Layouts
 // --------------------------------------------------
 .card-wrapper-row {
+  row-gap: 24px;
   .card-wrapper {
     height: 100%;
 
@@ -395,6 +404,17 @@ footer .social-icons a {
     }
   
     // Responsive
+    @media (max-width: 576px) {
+       .timeline-item:not(:last-child) {
+            margin-bottom: 2rem!important;
+        }
+        .timeline::before {
+           display: none;
+          }
+          .timeline-content {
+            width: 100%!important;
+          }
+    }
     @media (max-width: 768px) {
       .timeline::before {
         left: 10px;
